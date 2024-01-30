@@ -63,7 +63,7 @@ async function createUser() {
 
 
 // Metodo Put del CRUD(update)
-/* async function modifyUser(id) {
+ async function modifyUser(id) {
     debugger;
     const modifyUserForm = document.querySelector("#edit-form");
     console.log(modifyUserForm)
@@ -73,22 +73,22 @@ async function createUser() {
         method: "PUT",
         headers: { 'Content-Type': 'application/json' },
         body: `{
-            "name": "${modifyUserForm.element[0].value}",
-            "email": "${modifyUserForm.element[1].value}"
+            "name": "${modifyUserForm.elements[0].value}",
+            "email": "${modifyUserForm.elements[1].value}"
         }`
     });
 
     return result;
-} */
+}
 
-//PUT 
-async function displayEditUser(id, name, email) {
+//PUT con celia
+ async function displayEditUser(id, name, email) {
 
     sectionTag.innerHTML = `
     <form id="edit-form">
     <label for="modify-name">Nombre: </label><input id="modify-name" name="name"  value="${name}" type="text">
     <label for="modify-email">Email: </label><input id="modify-email" name="email" value="${email}" type="text">
-    <button type="submit" onclick="editUser('${id}')">Enviar</button>
+    <button type="submit" onclick="modifyUser('${id}')">Enviar</button>
     </form>`;
 };
 
