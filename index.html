@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="users-form">
+        <label for="new-name">Nombre</label><input id="new-name" type="text">
+        <label for="new-email">Email</label><input id="new-email" type="email">
+        <button type="submit" onclick="createUser()">Crear</button>
+    </form>
+    <button onclick="printUsers()">Cargar info</button>
+    <section id="user-list"></section>
+    <script src="src/services.js"></script>
+</body>
+</html>
